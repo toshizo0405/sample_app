@@ -13,12 +13,14 @@ class ListsController < ApplicationController
     end
   end
 
+
   def index
-    @lists=List.all
+    @lists = List.all
   end
 
+
   def show
-    @list=List.find(params[:id])
+    @list = List.find(params[:id])
   end
 
   def edit
@@ -38,7 +40,7 @@ class ListsController < ApplicationController
   end
 
   private
-  
+
   def list_params
     params.require(:list).permit(:title,:body,:image)
   end
